@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JStest</title>
+</head>
+<body>
+    
+    <h1> Gallery</h1>
+
+    <div>
+        <p style = 'text-align: center;'>
+          <img id = 'bigimg' src = 'assets/pic1.jpg'width= '1280',
+          height = '720' alt = 'Главное изображение' />
+        </p>
+       
+              <a><img src = 'assets/pic1.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Изображение 1' /></a>
+            
+              <a><img src = 'assets/pic2.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Изображение 2' /></a>
+        
+              <a><img src = 'assets/pic3.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Изображение 3' /></a>
+           
+              <a><img src = 'assets/pic4.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Изображение 4' /></a>
+            
+              <a><img src = 'assets/pic5.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Изображение 5' /></a>
+           
+              <a><img src = 'assets/pic6.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Изображение 6' /></a>
+           
+      </div>
+        
+      <script type="text/javascript">
+        function setBigImage(foto) {
+          document.getElementById("bigimg").src = foto.src;
+        }
+      </script>
+</body>
+</html>
