@@ -1,0 +1,68 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Smart</title>
+    </head>
+ 
+   
+    <body> 
+            <h1>Choose your Smart</h1>
+            
+        <form >
+            <fieldset>
+              <select name="Colour" id="model" onChange="updatePrice()">
+                <option value="Choose a model">Choose a model</option>
+                <option value="Fortwo coupe" data-price="1000">Fortwo coupe</option>
+                <option value="Crossblade" data-price="2000">Crossblade</option>
+                <option value="Forfour" data-price="3000">Forfour</option>
+                <option value="Roadster" data-price="4000">Roadster</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <select name="Size" id="engine" onChange="updatePrice()">
+                <option value="Choose the engine">Choose the engine</option>
+                <option value="Hybrid" data-price="4000">Hybrid</option>
+                <option value="Electric" data-price="3000">Electric</option>
+                <option value="Diesel" data-price="2000">Diesel</option>
+                <option value="Petrol" data-price="1000">Petrol</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <select name="Material" id="condition" onChange="updatePrice()">
+                <option value="Choose the condition">Choose the condition </option>
+                <option value="Pre-owned 4 years" data-price="100">Pre-owned 4 years</option>
+                <option value="Pre-owned 3 years" data-price="200">Pre-owned 3 years</option>
+                <option value="Pre-owned 2 years" data-price="300">Pre-owned 2 years</option>
+                <option value="New" data-price="40">New</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <div id="price">Total: $0
+              </div>
+            </fieldset>
+ 
+<script>
+         
+         function getPrice(type) {
+  let obj = document.getElementById(type);
+  let price = obj.options[obj.selectedIndex].getAttribute("data-price");
+  if (price == null)
+    price = 0;
+  return parseInt(price);
+}
+
+        function updatePrice() {
+  document.getElementById("price").innerHTML = "Total: $" +
+  (getPrice("model") + getPrice("engine") + getPrice("condition"));
+}
+            
+</script>
+  
+</form>
+</body>
+</html>
+
+
