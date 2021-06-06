@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Array 17</title>
+  </head>
+<body>
+  <p>Генератор 10 случайных чисел (по нажатию на кнопку) в диапазоне от 1 до 10 и вывод в массив</p>
+    
+  <button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,10)">Click Me</button>
+  
+  <p id="demo"></p>
+
+<script>
+  function getRndInteger(min, max)  {
+  let num = Math.floor(Math.random() * (max - min)) + min;
+  return num;
+}
+i = 0;
+do {
+  i += 1;
+
+    if (i >= 9) {
+      break;
+    }
+  text += i + ' ';
+} while (i <= 9);
+
+
+print(text); 
+
+
+</script>
+
+  </body>
+</html>
