@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> week 18 forms with validation</title>
+       <style> 
+  
+        input:valid { 
+         border-color: green;
+                    }
+        input:invalid { 
+        border-color: #ff00bf;
+                    }
+     </style>
+</head>
+ <h1> Form validation HTML</h1>
+<body>
+
+    <form action="signup" method="post">
+
+        
+        <div>
+            <label for="name"><b>Your name</b></label>
+            <input type="text" placeholder="Enter name" name="name" required>
+
+        
+        <div>
+            <label for="name"><b>Your Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+        
+        </div>
+
+  
+        <div>
+            <label for="name"><b>Your  phone number</b></label>
+            <input type="tel" placeholder="+7XXXXXXXXXX" name="phone" required>
+        
+        
+        </div>
+       
+        
+
+
+        <div><button type="button">Submit</button></div>
+        
+    </form>
+  
+   
+   
+   
+</body>
+</html>
