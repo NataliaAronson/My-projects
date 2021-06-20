@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator 19</title>
+      </head>
+      <body>
+        <table id="calculator" border="3">
+          <script>
+            // giving the tag id and selecting the element
+            let elem = document.getElementById("calculator");
+            // make it red
+            elem.style.background = "yellow";
+
+            //function for displaying values
+            function dis(val) {
+              document.getElementById("edu").value += val;
+            }
+            //function for evaluation
+            function solve() {
+              let a = document.getElementById("edu").value;
+              let b = eval(a);
+              document.getElementById("edu").value = b;
+            }
+            //function for clearing the display
+            function clr() {
+              document.getElementById("edu").value = "";
+            }
+          </script>
+
+          <tr>
+            <!-- creating  c button -->
+            <td><input type="button" value="c" onclick="clr()" /></td>
+            <!-- creating  result field -->
+            <td colspan="3"><input type="text" id="edu" /></td>
+          </tr>
+          <tr>
+            <!-- creating buttons and assigning values-->
+            <td><input type="button" value="+" onclick="dis('+')" /></td>
+            <td><input type="button" value="1" onclick="dis('1')" /></td>
+            <td><input type="button" value="2" onclick="dis('2')" /></td>
+            <td><input type="button" value="3" onclick="dis('3')" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="-" onclick="dis('-')" /></td>
+            <td><input type="button" value="4" onclick="dis('4')" /></td>
+            <td><input type="button" value="5" onclick="dis('5')" /></td>
+            <td><input type="button" value="6" onclick="dis('6')" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="*" onclick="dis('*')" /></td>
+            <td><input type="button" value="7" onclick="dis('7')" /></td>
+            <td><input type="button" value="8" onclick="dis('8')" /></td>
+            <td><input type="button" value="9" onclick="dis('9')" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="/" onclick="dis('/')" /></td>
+            <td><input type="button" value="." onclick="dis('.')" /></td>
+            <td><input type="button" value="0" onclick="dis('0')" /></td>
+            <!-- Evaluating function call eval()-->
+            <td><input type="button" value="=" onclick="solve()" /></td>
+          </tr>
+        </table>
+      </body>
+    </html>
+
+    <!-- Если вставить этот скрипт, то ломается((((
+
+     <script>
+        class Result {
+            constructor (num1, num2) {
+                this.num1 = num1
+                this.num2 = num2;
+               
+            }
+
+            
+            static sum(num1,num2) {
+                return num1 + num2;
+            }
+
+            static sub(num1, num2) {
+                return num1 - num2;
+            }
+
+
+            static mult(num1, num2) {
+                return num1 * num2;
+            }
+
+
+            static divide (num1, num2) {
+                return num1 % num2;
+            }
+
+           
+        }
+
+        function solve() {}???????
+            
+
+        console.log(Calculator.sum(5, 4)); // запустить статичный метод
+
+    </script>  

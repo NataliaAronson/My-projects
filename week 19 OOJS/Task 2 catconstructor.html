@@ -1,0 +1,80 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Pet List</title>
+
+    <style> 
+  
+        input:valid { 
+         border-color: green;
+                    }
+        input:invalid { 
+        border-color: #ff00bf;
+                    }
+     </style>
+</head>
+ <h1> Tell us about Your Cat</h1>
+<body>
+
+    <form >
+
+        <div>
+            <label for=" name"><b>Your cat's name</b></label>
+            <input type="text" placeholder="Enter your cat's name"id="name" required>
+
+        </div>
+
+        <div>
+            <label for="weight"><b>Your cat's weight</b></label>
+            <input type="number" placeholder="Enter  your cat's weight" id ="weight" required>
+        
+        </div>
+
+  
+        <div>
+            <label for="age"><b>Your cat's age</b></label>
+            <input type="number" placeholder="Enter your cat's age" id ="age" required>
+        
+        </div>
+        
+        <div>
+            <label for="activity level "><b> What's your cat's activity level?</b></label>
+            <input type="number" placeholder=" Activity level from 1 to 10" id ="activity" required>
+        
+        </div>
+        
+    </form>
+    <button onclick="createPet()">OK</button>
+
+    <div id="list"></div>
+    <script>
+        class Pet {
+            constructor(name,weight,age,activity ) {
+                this.name = name;
+                this.weight = weight;
+                this.age = age;
+                this.activity = activity;
+            }
+   
+        }
+
+        function createPet() {
+            let pet1 = new Pet(document.getElementById("name").value,document.getElementById("weight").value,document.getElementById("age").value,document.getElementById("activity").value );
+         
+            console.log(pet1);
+
+        
+           document.getElementById ("list").innerHTML = `Name: ${pet1.name}, weight: ${pet1.weight}, age: ${pet1.age}, activity level: ${pet1.activity}`;  
+        }
+
+    </script>
+</body>
+</html>
